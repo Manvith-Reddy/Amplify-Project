@@ -11,7 +11,10 @@ function App({ signOut }) {
     <>
       <NavBar
       marginBottom='20px' width='100%'
-      overrides={{ Button3887810: { onClick: () => setShowCreateModal(true) }, Button3887806: {onClick: async() => { + await DataStore.clear(); signOut()}
+      overrides={{ Button3887810: { onClick: () => setShowCreateModal(true) }, Button3887806: {onClick: async() => { 
+        await DataStore.clear(); 
+        signOut();
+        }
         }}}
       />
       <div className='container'>
