@@ -1,7 +1,7 @@
 import { withAuthenticator } from '@aws-amplify/ui-react'
 import { CreateNote, NavBar, NotesUICollection, UpdateNote } from './ui-components'
 import React, { useState } from 'react';
-import { DataStore } from 'aws-amplify'
+import { DataStore } from '@aws-amplify/datastore';
 function App({ signOut }) {
   const [ShowCreateModal, setShowCreateModal] = useState(false)
   const [ShowUpdateModal, setShowUpdateModal] = useState(false)
@@ -11,7 +11,7 @@ function App({ signOut }) {
     <>
       <NavBar
       marginBottom='20px' width='100%'
-      overrides={{ Button3887810: { onClick: () => setShowCreateModal(true) }, Button3887806: {onClick: async() => { + await DataStore.clear(), signOut()}
+      overrides={{ Button3887810: { onClick: () => setShowCreateModal(true) }, Button3887806: {onClick: async() => { + await DataStore.clear(); signOut()}
         }}}
       />
       <div className='container'>
