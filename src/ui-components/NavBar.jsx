@@ -73,7 +73,7 @@ export default function NavBar(props) {
         backgroundColor="rgba(255,255,255,1)"
         size="large"
         isDisabled={false}
-        variation="primary"
+        variation="default"
         children="Create Note"
         {...getOverrideProps(overrides, "Button3887810")}
       ></Button>
