@@ -57,7 +57,7 @@ export default function CreateNote(props) {
         left="calc(50% - 206px - -0.5px)"
         size="large"
         isDisabled={true}
-        variation="primary"
+        variation="default"
         children="Save"
         onClick={() => {
           buttonThreeEightFiveSixNineNineSevenOnClick();
