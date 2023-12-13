@@ -9,6 +9,7 @@ import * as React from "react";
 import { useState } from "react";
 import { generateClient } from "aws-amplify/api";
 import { createNotes } from "../graphql/mutations";
+import { schema } from "C:\Program Files\nodejs\node_modules\npm\notes\amplify\backend\api\Notes\schema";
 import { getOverrideProps,useDataStoreCreateAction,useStateMutationAction, } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
 const client = generateClient();

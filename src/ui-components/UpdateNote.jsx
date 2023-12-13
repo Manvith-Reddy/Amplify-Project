@@ -7,13 +7,14 @@
 /* eslint-disable */
 import * as React from "react";
 import { useState } from "react";
+import { Notes } from "C:\Program Files\nodejs\node_modules\npm\notes\amplify\backend\api\Notes";
 import { generateClient } from "aws-amplify/api";
 import { updateNotes } from "../graphql/mutations";
 import { getOverrideProps,
   useDataStoreUpdateAction,
   useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
-import { schema } from "../models/schema";
+import { schema } from "C:\Program Files\nodejs\node_modules\npm\notes\amplify\backend\api\Notes\schema";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
 const client = generateClient();
 export default function UpdateNote(props) {
@@ -32,7 +33,7 @@ export default function UpdateNote(props) {
       Text: textFieldThreeEightSixSevenTwoFiveFiveNineValue,
     },
     id: notes?.id,
-    model: notes,
+    model: Notes,
     schema: schema,
     });
   return (
