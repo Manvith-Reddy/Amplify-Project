@@ -1,7 +1,8 @@
 import { withAuthenticator } from '@aws-amplify/ui-react'
 import { CreateNote, NavBar, NotesUICollection, UpdateNote } from './ui-components'
 import React, { useState } from 'react';
-function App() {
+import { DataStore } from 'aws-amplify'
+function App({ signOut }) {
   const [ShowCreateModal, setShowCreateModal] = useState(false)
   const [ShowUpdateModal, setShowUpdateModal] = useState(false)
   const [updateNote, setUpdateNote] = useState(false)
