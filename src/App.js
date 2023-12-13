@@ -1,5 +1,5 @@
 import { withAuthenticator } from '@aws-amplify/ui-react'
-import { CreateNote, NavBar, NoteUICollection, UpdateNote } from './ui-components'
+import { CreateNote, NavBar, NotesUICollection, UpdateNote } from './ui-components'
 
 function App() {
   const [ShowCreateModal, setShowCreateModal] = useState(false)
@@ -14,7 +14,7 @@ function App() {
         }}}
       />
       <div className='container'>
-        <NoteUICollection overrideItems = {({ item, idx }) => { 
+        <NotesUICollection overrideItems = {({ item, idx }) => { 
           return {
             overrides : {
               Button38954199: {
