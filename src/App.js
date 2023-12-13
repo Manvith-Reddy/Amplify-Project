@@ -33,7 +33,7 @@ function App({ signOut }) {
         />
       </div>
       <div className='modal' style={{display: ShowCreateModal === false && 'none'}}>
-        <CreateNote overrides={{ Button38954151: { onClick: () => setShowCreateModal(true) } }} />
+        <CreateNote overrides={{ Button3856997: { onClick: () => setShowCreateModal(true) } }} />
       </div>
       <div className='modal' style={{ display: ShowUpdateModal === false && 'none' }}>
       <UpdateNote
