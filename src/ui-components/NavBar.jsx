@@ -6,10 +6,13 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
+import { getOverrideProps, useAuthSignOutAction } from "./utils";
 import { Button, Heading, View } from "@aws-amplify/ui-react";
 export default function NavBar(props) {
   const { overrides, ...rest } = props;
+  const buttonThreeEightEightSevenEightZeroSixOnClick = useAuthSignOutAction({
+    global: false,
+  });
   return (
     <View
       width="1230px"
@@ -61,6 +64,9 @@ export default function NavBar(props) {
         isDisabled={false}
         variation="default"
         children="Sign Out"
+        onClick={() => {
+          buttonThreeEightEightSevenEightZeroSixOnClick();
+        }}
         {...getOverrideProps(overrides, "Button3887806")}
       ></Button>
       <Button
