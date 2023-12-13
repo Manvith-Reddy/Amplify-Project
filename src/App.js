@@ -15,8 +15,9 @@ function App({ signOut }) {
         Button3887810: { onClick: () => setShowCreateModal(true) },
         Button3887806: {
           onClick: async() => { 
-            await DataStore.clear() 
-            signOut()
+            await DataStore.clear(); 
+            signOut();
+            console.log('After signOut');
           }
         }
       }}
