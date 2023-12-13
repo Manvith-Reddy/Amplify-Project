@@ -9,9 +9,7 @@ import * as React from "react";
 import { useState } from "react";
 import { generateClient } from "aws-amplify/api";
 import { createNotes } from "../graphql/mutations";
-import { Notes } from "../models";
-import { schema } from "../models/schema";
-import { getOverrideProps,useDataStoreCreateAction,useStateMutationAction, } from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "./utils";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
 const client = generateClient();
 export default function CreateNote(props) {
@@ -19,13 +17,16 @@ export default function CreateNote(props) {
   const [
     textFieldThreeEightFiveSixNineNineSixValue,
     setTextFieldThreeEightFiveSixNineNineSixValue,
-  ] = useStateMutationAction("");
+  ] = useState("");
   const [
     textFieldThreeEightFiveSixNineNineFiveValue,
     setTextFieldThreeEightFiveSixNineNineFiveValue,
-  ] = useStateMutationAction("");
-  const buttonThreeEightFiveSixNineNineSevenOnClick = useDataStoreCreateAction ({
-      fields {
+  ] = useState("");
+  const buttonThreeEightFiveSixNineNineSevenOnClick = async () => {
+    await client.graphql({
+      query: createNotes.replaceAll("__typename", ""),
+      variables: {
+        input: {
           Tile: textFieldThreeEightFiveSixNineNineSixValue,
           Text: textFieldThreeEightFiveSixNineNineFiveValue,
         },
@@ -55,7 +56,7 @@ export default function CreateNote(props) {
         top="465px"
         left="calc(50% - 206px - -0.5px)"
         size="large"
-        isDisabled={false}
+        isDisabled={true}
         variation="primary"
         children="Save"
         onClick={() => {
