@@ -1,6 +1,6 @@
 import { withAuthenticator } from '@aws-amplify/ui-react'
 import { CreateNote, NavBar, NotesUICollection, UpdateNote } from './ui-components'
-
+import React, { useState } from 'react';
 function App() {
   const [ShowCreateModal, setShowCreateModal] = useState(false)
   const [ShowUpdateModal, setShowUpdateModal] = useState(false)
@@ -20,7 +20,7 @@ function App() {
               Button38954199: {
                 onClick: () =>{
                   setShowUpdateModal(true)
-                  setUpdateModal(item)
+                  setUpdateNote(item)
                 }
 
               } 
