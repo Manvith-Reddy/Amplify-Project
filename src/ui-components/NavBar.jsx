@@ -58,7 +58,7 @@ export default function NavBar(props) {
         left="1063px"
         backgroundColor="rgba(255,255,255,1)"
         size="large"
-        isDisabled={true}
+        isDisabled={false}
         variation="primary"
         children="Sign Out"
         {...getOverrideProps(overrides, "Button3887806")}
@@ -72,7 +72,7 @@ export default function NavBar(props) {
         left="868px"
         backgroundColor="rgba(255,255,255,1)"
         size="large"
-        isDisabled={true}
+        isDisabled={false}
         variation="primary"
         children="Create Note"
         {...getOverrideProps(overrides, "Button3887810")}
