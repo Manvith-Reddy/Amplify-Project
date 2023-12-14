@@ -3,24 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { studioTheme } from './ui-components'
-import awsconfig from './aws-exports';
 
 // src/index.js
 import { Amplify } from 'aws-amplify'
 import config from './aws-exports'
 
 // src/index.js
-import { ThemeProvider } from '@aws-amplify/ui-react'
+
+import { AmplifyProvider } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css'
 
-Amplify.configure(awsconfig);
+import { studioTheme } from './ui-components'
 Amplify.configure(config)
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider theme={studioTheme}>
+  <AmplifyProvider theme={studioTheme}>
     <App />
-  </ThemeProvider>
+  </AmplifyProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

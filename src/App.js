@@ -17,7 +17,6 @@ function App({ signOut }) {
           onClick: async() => { 
             await DataStore.clear(); 
             signOut();
-            console.log('After signOut');
           }
         }
       }}
