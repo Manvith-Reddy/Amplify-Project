@@ -14,7 +14,7 @@ import { Notes } from "../models";
 import { schema } from "../models/schema";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
 const client = generateClient();
-export default function UpdateNote(props) {
+export default function updateNotes(props) {
   const { notes, overrides, ...rest } = props;
   const [
     textFieldThreeEightSixSevenTwoFourFiveThreeValue,

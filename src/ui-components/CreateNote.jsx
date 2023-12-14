@@ -14,7 +14,7 @@ import { schema } from "../models/schema";
 import { getOverrideProps,useStateMutationAction,useDataStoreCreateAction} from "./utils";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
 const client = generateClient();
-export default function CreateNote(props) {
+export default function createNotes(props) {
   const { overrides, ...rest } = props;
   const [
     textFieldThreeEightFiveSixNineNineSixValue,
