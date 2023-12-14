@@ -9,7 +9,7 @@ import * as React from "react";
 import { useState } from "react";
 import { generateClient } from "aws-amplify/api";
 import { updateNotes } from "../graphql/mutations";
-import { getOverrideProps,useStateMutationAction} from "./utils";
+import { getOverrideProps,useStateMutationAction,useDataStoreUpdateAction} from "./utils";
 import { Notes } from "../models";
 import { schema } from "../models/schema";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
