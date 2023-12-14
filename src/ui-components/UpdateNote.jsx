@@ -7,7 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { useState } from "react";
-import { Notes } from "C:/Program Files/nodejs/node_modules/npm/notes/amplify/backend/api/Notes";
+//import { Notes } from "C:/Program Files/nodejs/node_modules/npm/notes/amplify/backend/api/Notes";
 import { generateClient } from "aws-amplify/api";
 import { updateNotes } from "../graphql/mutations";
 import { getOverrideProps,useStateMutationAction} from "./utils";
