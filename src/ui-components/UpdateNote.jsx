@@ -10,10 +10,7 @@ import { useState } from "react";
 import { Notes } from "C:\Program Files\nodejs\node_modules\npm\notes\amplify\backend\api\Notes";
 import { generateClient } from "aws-amplify/api";
 import { updateNotes } from "../graphql/mutations";
-import { getOverrideProps,
-  useDataStoreUpdateAction,
-  useStateMutationAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps} from "@aws-amplify/ui-react";
 import { schema } from "C:\Program Files\nodejs\node_modules\npm\notes\amplify\backend\api\Notes\schema";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
 const client = generateClient();
@@ -22,12 +19,12 @@ export default function UpdateNote(props) {
   const [
     textFieldThreeEightSixSevenTwoFourFiveThreeValue,
     setTextFieldThreeEightSixSevenTwoFourFiveThreeValue,
-  ] = useStateMutationAction("");
+  ] = useState("");
   const [
     textFieldThreeEightSixSevenTwoFiveFiveNineValue,
     setTextFieldThreeEightSixSevenTwoFiveFiveNineValue,
-  ] = useStateMutationAction("");
-  const buttonThreeEightSixEightTwoOneNineOnClick = useDataStoreUpdateAction({
+  ] = useState("");
+  const buttonThreeEightSixEightTwoOneNineOnClick = useState({
     fields: {
       Tile: textFieldThreeEightSixSevenTwoFourFiveThreeValue,
       Text: textFieldThreeEightSixSevenTwoFiveFiveNineValue,
