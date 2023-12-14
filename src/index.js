@@ -5,8 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { studioTheme } from './ui-components'
 import awsconfig from './aws-exports';
-Amplify.configure(awsconfig);
-DataStore.configure(awsconfig);
+
 // src/index.js
 import { Amplify } from 'aws-amplify'
 import config from './aws-exports'
@@ -15,7 +14,7 @@ import config from './aws-exports'
 import { ThemeProvider } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css'
 
-
+Amplify.configure(awsconfig);
 Amplify.configure(config)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
