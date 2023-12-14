@@ -8,13 +8,13 @@
 import * as React from "react";
 import { useState } from "react";
 import { generateClient } from "aws-amplify/api";
-import { createNotes } from "../graphql/mutations";
+//import { createNotes } from "../graphql/mutations";
 import { Notes } from "../models";
 import { schema } from "../models/schema";
 import { getOverrideProps,useStateMutationAction,useDataStoreCreateAction} from "./utils";
 import { Button, Flex, TextField, View } from "@aws-amplify/ui-react";
 const client = generateClient();
-export default function createNotes(props) {
+export default function CreateNote(props) {
   const { overrides, ...rest } = props;
   const [
     textFieldThreeEightFiveSixNineNineSixValue,
